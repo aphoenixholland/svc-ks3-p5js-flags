@@ -11,7 +11,7 @@ let params, img, canvas, flag;
 
 function preload() {
     listFlags();
-    changeFlag('One/ch.png');
+    //changeFlag('One/ch.png');
 }
 
 function failureCallback() {
