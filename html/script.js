@@ -41,7 +41,7 @@ function draw() {
         stroke(lineColor);
         line(x,0,  x,height);
         line(0,y,  width,y);
-        lineColor == 0 ? 255 : 0;
+        lineColor = lineColor == 0 ? 255 : 0;
     } else {
         select("#info").html('&nbsp;<br />&nbsp;');
         select("#sample").style('background-color','lightgrey');    
