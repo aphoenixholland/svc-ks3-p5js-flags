@@ -7,10 +7,11 @@ DONE display image properties
 DONE do the hover mouse get colour thing
 */
 
-let params, img, canvas, flag;
+let params, img, canvas, flag, lineColor=0;
 
 function preload() {
     listFlags();
+    frameRate(3);
 }
 
 
@@ -37,6 +38,10 @@ function draw() {
         select("#info").html(`${a}<br />${b}`);
         select("#sample").style('background-color',`rgba(${c[0]},${c[1]},${c[2]},${(c[3]/256)})`);    
         select("#sample").style('border','10px solid grey');
+        stroke(lineColor);
+        line(x,0,  x,height);
+        line(0,y,  width,y);
+        lineColor == 0 ? 255 : 0;
     } else {
         select("#info").html('&nbsp;<br />&nbsp;');
         select("#sample").style('background-color','white');    
