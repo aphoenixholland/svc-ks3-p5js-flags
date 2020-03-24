@@ -65,7 +65,7 @@ function failureCallback() {
 }
 
 function myButton() {
-    alert("Here");
+    resizeCanvas(img.width, img.height);
 }
 
   
