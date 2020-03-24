@@ -19,6 +19,7 @@ function failureCallback() {
 
 function setup() {
     canvas = createCanvas();
+    canvas.parent('sketch-holder');
     changeFlag('One/ch.png');
 }
   
@@ -55,8 +56,7 @@ function changeFlag(f) {
     alert(flag);
     img = loadImage(`../${flag}`,null,failureCallback);
     select("#title").html(name);
-    canvas = resizeCanvas(img.width, img.height);
-    canvas.parent('sketch-holder');
+    resizeCanvas(img.width, img.height);
     image(img,0,0);
     name = f.substr(1 + f.lastIndexOf('/'), 100);
 }
