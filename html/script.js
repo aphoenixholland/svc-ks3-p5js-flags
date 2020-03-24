@@ -33,12 +33,14 @@ function draw() {
 
     if(ok) {
         let a = `X: ${x} Y: ${y}`;
-        let b = `R:${c[0]} G:${c[1]} B:${c[2]} A:${c[3]} `;
+        let b = `R:${c[0]} G:${c[1]} B:${c[2]}`;
         select("#info").html(`${a}<br />${b}`);
         select("#sample").style('background-color',`rgba(${c[0]},${c[1]},${c[2]},${(c[3]/256)})`);    
+        select("#sample").style('border','10px solid grey');
     } else {
-        select("#info").html('');
-        select("#sample").html('');
+        select("#info").html('&nbsp;<br />&nbsp;');
+        select("#sample").style('background-color','white');    
+        select("#sample").style('border','10px solid white');
     }
 }
 
