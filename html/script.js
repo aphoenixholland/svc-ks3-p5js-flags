@@ -18,8 +18,8 @@ function failureCallback() {
 }
 
 function setup() {
-    changeFlag('One/ch.png');
     canvas = createCanvas();
+    changeFlag('One/ch.png');
 }
   
 function draw() {
