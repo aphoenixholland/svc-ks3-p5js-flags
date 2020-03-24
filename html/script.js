@@ -11,7 +11,9 @@ let params, img, canvas, flag;
 
 function preload() {
     listFlags();
-    //changeFlag('One/ch.png');
+    alert(flag);
+
+    changeFlag('One/ch.png');
 }
 
 function failureCallback() {
@@ -46,6 +48,7 @@ function listFlags() {
 
 function changeFlag(f) {
     flag = f;
+    alert(flag);
     img = loadImage(`../${flag}`,null,failureCallback);
     name = f.substr(1 + f.lastIndexOf('/'), 100);
 }
