@@ -7,13 +7,11 @@ DONE display image properties
 DONE do the hover mouse get colour thing
 */
 
-let params, img, canvas, name, basePath = "https://raw.githubusercontent.com/aphoenixholland/svc-ks3-p5js-flags/master/";
+let params, img, canvas, flag;
 
 function preload() {
-    params = getURLParams();
-    img = loadImage(basePath + params.img,null,failureCallback);
-    name = params.img.substr(1 + params.img.lastIndexOf('/'), 100);
     listFlags();
+    changeFlag('One/ch.png');
 }
 
 function failureCallback() {
@@ -41,9 +39,14 @@ function draw() {
 function listFlags() {
     let ret = "";
     flags.forEach(f => {
-        ret += `<img src="${basePath + f}" class="flagThumbnail" /><br />`;
+        ret += `<img src="../${f}" class="flagThumbnail" onclick="changeFlag('${f}');"/><br />`;
     })
     select('#flagsList').html(ret);
+}
+
+function changeFlag(f) {
+    img = loadImage(`../${f}`,null,failureCallback);
+    name = f.substr(1 + f.lastIndexOf('/'), 100);
 }
 
   
