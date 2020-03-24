@@ -15,7 +15,7 @@ function preload() {
 }
 
 function failureCallback() {
-    alert("Could not load the requested image: " + params.img);
+    alert("Could not load the requested image: " + flag);
 }
 
 function setup() {
@@ -45,7 +45,8 @@ function listFlags() {
 }
 
 function changeFlag(f) {
-    img = loadImage(`../${f}`,null,failureCallback);
+    flag = f;
+    img = loadImage(`../${flag}`,null,failureCallback);
     name = f.substr(1 + f.lastIndexOf('/'), 100);
 }
 
