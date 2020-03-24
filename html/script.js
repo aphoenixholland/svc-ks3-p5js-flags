@@ -64,4 +64,8 @@ function failureCallback() {
     alert("Could not load the requested image: " + flag);
 }
 
+function myButton() {
+    alert("Here");
+}
+
   
