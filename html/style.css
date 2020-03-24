@@ -6,6 +6,7 @@ body {
 
 .flagThumbnail {
     width: 150px;
+    box-shadow: 3px 3px 12px 1px grey;
 }
 
 #container {
