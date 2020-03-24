@@ -11,7 +11,6 @@ let params, img, canvas, flag;
 
 function preload() {
     listFlags();
-    changeFlag('One/ch.png');
 }
 
 function failureCallback() {
@@ -19,6 +18,8 @@ function failureCallback() {
 }
 
 function setup() {
+    changeFlag('One/ch.png');
+    canvas = createCanvas();
 }
   
 function draw() {
@@ -54,7 +55,6 @@ function changeFlag(f) {
     alert(flag);
     img = loadImage(`../${flag}`,null,failureCallback);
     select("#title").html(name);
-    //canvas = createCanvas();
     canvas = resizeCanvas(img.width, img.height);
     canvas.parent('sketch-holder');
     image(img,0,0);
