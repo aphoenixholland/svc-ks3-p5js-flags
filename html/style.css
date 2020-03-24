@@ -2,6 +2,7 @@ body {
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     overflow: hidden;
+    background-color: lightgray;
 }
 
 .flagThumbnail {
