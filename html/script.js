@@ -21,6 +21,7 @@ function setup() {
 }
   
 function draw() {
+    if(width != img.width || height != img.height) { resizeCanvas(img.width, img.height); }
     image(img,0,0);
     rect(10, 10, 200, 200);
     let ok = false;
