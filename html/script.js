@@ -55,7 +55,7 @@ function changeFlag(f) {
     img = loadImage(`../${flag}`,null,failureCallback);
     select("#title").html(name);
     name = f.substr(1 + f.lastIndexOf('/'), 100);
-    resizeCanvas(img.width, img.height);
+    //resizeCanvas(img.width, img.height);
 }
 
 function failureCallback() {
