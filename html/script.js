@@ -11,8 +11,6 @@ let params, img, canvas, flag;
 
 function preload() {
     listFlags();
-    alert(flag);
-
     changeFlag('One/ch.png');
 }
 
