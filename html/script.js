@@ -23,7 +23,6 @@ function setup() {
 function draw() {
     if(width != img.width || height != img.height) { resizeCanvas(img.width, img.height); }
     image(img,0,0);
-    rect(10, 10, 200, 200);
     let ok = false;
     let x = floor(constrain(mouseX, 0, width));
     let y = floor(constrain(mouseY, 0, height));
@@ -48,7 +47,7 @@ function draw() {
 function listFlags() {
     let ret = "";
     flags.forEach(f => {
-        ret += `<img src="../${f}" class="flagThumbnail" onclick="changeFlag('${f}');"/><br />`;
+        ret += `<img src="../${f}" class="flagThumbnail" onclick="changeFlag('${f}');"/><br />${f}<br /><br />`;
     })
     select('#flagsList').html(ret);
 }
