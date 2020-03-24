@@ -44,8 +44,8 @@ function draw() {
         lineColor == 0 ? 255 : 0;
     } else {
         select("#info").html('&nbsp;<br />&nbsp;');
-        select("#sample").style('background-color','white');    
-        select("#sample").style('border','10px solid white');
+        select("#sample").style('background-color','lightgrey');    
+        select("#sample").style('border','10px solid lightgrey');
     }
 }
 
