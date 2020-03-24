@@ -13,18 +13,16 @@ function preload() {
     listFlags();
 }
 
-function failureCallback() {
-    alert("Could not load the requested image: " + flag);
-}
 
 function setup() {
-    canvas = createCanvas();
+    canvas = createCanvas(400, 400);
     canvas.parent('sketch-holder');
     changeFlag('One/ch.png');
 }
   
 function draw() {
     image(img,0,0);
+    rect(10, 10, 200, 200);
     let ok = false;
     let x = floor(constrain(mouseX, 0, width));
     let y = floor(constrain(mouseY, 0, height));
@@ -54,11 +52,14 @@ function listFlags() {
 
 function changeFlag(f) {
     flag = f;
-    alert(flag);
     img = loadImage(`../${flag}`,null,failureCallback);
     select("#title").html(name);
-    resizeCanvas(img.width, img.height);
     name = f.substr(1 + f.lastIndexOf('/'), 100);
+    resizeCanvas(img.width, img.height);
+}
+
+function failureCallback() {
+    alert("Could not load the requested image: " + flag);
 }
 
   
