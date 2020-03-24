@@ -63,9 +63,4 @@ function changeFlag(f) {
 function failureCallback() {
     alert("Could not load the requested image: " + flag);
 }
-
-function myButton() {
-    resizeCanvas(img.width, img.height);
-}
-
   
