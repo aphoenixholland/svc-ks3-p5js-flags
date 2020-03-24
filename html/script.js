@@ -38,8 +38,9 @@ function draw() {
         select("#info").html(`${a}<br />${b}`);
         select("#sample").style('background-color',`rgba(${c[0]},${c[1]},${c[2]},${(c[3]/256)})`);    
         select("#sample").style('border','10px solid grey');
-        stroke(lineColor%255);
+        stroke(lineColor%256);
         line(x,0,  x,height);
+        stroke((lineColor+128)%256);
         line(0,y,  width,y);
     } else {
         select("#info").html('&nbsp;<br />&nbsp;');
