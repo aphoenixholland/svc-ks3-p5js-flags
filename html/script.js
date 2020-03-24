@@ -24,6 +24,7 @@ function setup() {
 }
   
 function draw() {
+    image(img,0,0);
     let ok = false;
     let x = floor(constrain(mouseX, 0, width));
     let y = floor(constrain(mouseY, 0, height));
@@ -57,7 +58,6 @@ function changeFlag(f) {
     img = loadImage(`../${flag}`,null,failureCallback);
     select("#title").html(name);
     resizeCanvas(img.width, img.height);
-    image(img,0,0);
     name = f.substr(1 + f.lastIndexOf('/'), 100);
 }
 
