@@ -23,7 +23,7 @@ function setup() {
 function draw() {
     lineColor++;
     if(width != img.width || height != img.height) { resizeCanvas(img.width, img.height); }
-    name = f.substr(1 + f.lastIndexOf('/'), 100)  + " (" + width + " x " + height +")";
+    name = flag.substr(1 + flag.lastIndexOf('/'), 100)  + " (" + width + " x " + height +")";
     select("#title").html(name);
     image(img,0,0);
     let ok = false;
