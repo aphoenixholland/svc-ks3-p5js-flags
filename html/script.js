@@ -60,7 +60,7 @@ function listFlags() {
 function changeFlag(f) {
     flag = f;
     img = loadImage(`../${flag}`,null,failureCallback);
-    name = f.substr(1 + f.lastIndexOf('/'), 100)  + " (" + img.width + " x " + img.height +")";
+    name = f.substr(1 + f.lastIndexOf('/'), 100)  + " (" + toString(img.width) + " x " + toString(img.height) +")";
     select("#title").html(name);
 }
 
