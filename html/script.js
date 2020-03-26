@@ -10,6 +10,7 @@ DONE do the hover mouse get colour thing
 let params, img, canvas, flag, lineColor=0;
 
 function preload() {
+    params = getURLParams();
     listFlags();
 }
 
