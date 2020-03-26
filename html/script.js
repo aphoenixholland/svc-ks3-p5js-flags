@@ -17,7 +17,7 @@ function preload() {
 function setup() {
     canvas = createCanvas(400, 400);
     canvas.parent('sketch-holder');
-    if(params.img != null) {
+    if(params['img'] != "") {
         changeFlag(params.img);
     } else {
         changeFlag('One/ch.png');
